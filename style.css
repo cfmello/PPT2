@@ -42,6 +42,7 @@ h1, h2, h3 {
 }
 
 p {
+    font-family: Overpass;
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -62,6 +63,7 @@ p {
 
 .btn-blue:hover {
     background-color: #0D1EC6;
+    transform: scale(1.05);
 }
 
 .container {
@@ -112,9 +114,59 @@ p {
     font-weight: bold;
 }
 
+.card-item:hover {
+    transform: scale(1.05);
+}
+
+.typewriter {
+    animation: animated-text 4s steps(31, end);
+    animation-iteration-count: infinite;
+    display: inline-block;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    overflow: hidden;
+    position: relative;
+}
+
+@keyframes animated-text {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
 footer {
     background: #404042;
     color: white;
     padding: 10px 0px;
-    text-align: center;
+    text-align: center;    
+}
+
+@media (min-width: 300px) {
+    .container {
+        width: 400px;
+    }
+    .card {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 700px) {
+    .container {
+        width: 600px;
+    }
+    .card {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1000px) {
+    .container {
+        width: 900px;
+    }
+    .card {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
